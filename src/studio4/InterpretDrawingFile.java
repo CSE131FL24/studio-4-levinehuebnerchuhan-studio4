@@ -25,14 +25,22 @@ public class InterpretDrawingFile {
 	        int green = in.nextInt();
 	        int blue = in.nextInt();
 	        StdDraw.setPenColor(red, green, blue);
+	        boolean b = in.nextBoolean();
+	        
+	        
         if (shapeType.equals("rectangle")) {
             double x = in.nextDouble();
             double y = in.nextDouble();
             double halfWidth = in.nextDouble();
             double halfHeight = in.nextDouble();
+            if(b==true) {
 
-                StdDraw.rectangle(x, y, halfWidth, halfHeight);
+                StdDraw.filledRectangle(x, y, halfWidth, halfHeight);
             }
+            else{
+            	StdDraw.rectangle(x, y, halfWidth, halfHeight);
+            }
+        }
 
         in.close();
 	}
