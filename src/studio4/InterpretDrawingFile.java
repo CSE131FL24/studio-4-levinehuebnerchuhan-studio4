@@ -20,6 +20,7 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		
+		String shapeType = in.next();
 		 int red = in.nextInt();
 	        int green = in.nextInt();
 	        int blue = in.nextInt();
